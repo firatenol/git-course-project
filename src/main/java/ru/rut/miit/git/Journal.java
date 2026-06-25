@@ -60,8 +60,7 @@ public class Journal {
             System.out.println("Дневник пуст.");
             return Collections.emptyList();
         }
-        List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8).stream().skip(1).collect(Collectors.toList());
-        System.out.println("--- Записи дневника ---");
+        List<String> lines = Files.readAllLines(path, StandardCharsets.UTF_8);        System.out.println("--- Записи дневника ---");
         lines.forEach(System.out::println);
         System.out.println("-----------------------");
         System.out.println("--- Результаты поиска ---"); // Изменим заголовок для наглядности
